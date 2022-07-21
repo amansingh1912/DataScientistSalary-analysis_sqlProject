@@ -1,0 +1,77 @@
+** Finding Total number of persons in the dataset.
+
+SELECT count(*) FROM datascience_salaries.ds_salaries;
+
+** Finding which company size has highest number of people in the dataset.
+
+SELECT COUNT(*) FROM datascience_salaries.ds_salaries WHERE company_size = "L";
+
+SELECT COUNT(*) FROM datascience_salaries.ds_salaries WHERE company_size = "M";
+
+SELECT COUNT(*) FROM datascience_salaries.ds_salaries WHERE company_size = "S";
+
+Conclusion: Comparing the above 3 values and we will come to the conclusion.
+
+
+** Find maximum salary of data science employees from the table.
+
+SELECT MAX(salary_in_usd) FROM datascience_salaries.ds_salaries;
+
+
+** Find minimum salary of data science employees from the table.
+
+--SELECT MIN(salary_in_usd) FROM datascience_salaries.ds_salaries;
+
+
+** Find average salary of data science employees from the table.
+
+--SELECT avg(salary_in_usd) FROM datascience_salaries.ds_salaries;
+
+** Find sum of all salary of data science employees from the table.
+--SELECT avg(salary_in_usd) FROM datascience_salaries.ds_salaries;
+
+** Find distinct number of job titles from the table.
+--SELECT COUNT(DISTINCT job_title) as "Number of Job Titles" FROM datascience_salaries.ds_salaries;
+
+** Find number of employment types in the table
+--SELECT COUNT(DISTINCT employment_type) as "Number of Employment Types" FROM datascience_salaries.ds_salaries;
+
+** Find number of experience levels in the table.
+--SELECT COUNT(DISTINCT experience_level) as "Number of Experience Levels" FROM datascience_salaries.ds_salaries;
+
+** Find number of types of salary_currency from the table.
+-- SELECT COUNT(DISTINCT salary_currency) as "Different Salary Currencies" FROM datascience_salaries.ds_salaries;
+
+** Find Sum of Salary from the experience level SE.
+
+-- SELECT SUM(salary) FROM datascience_salaries.ds_salaries WHERE experience_level = "SE";
+
+Similarly, if asked we can find salary for other experience levels too and apply other aggregate functions too like AVG(), MAX(), MIN() to them.
+
+--Using Logical Operators:
+
+**Find sum of salary of employees working in the year 2020 and with experience_level ="MI"
+
+--SELECT SUM(salary) FROM datascience_salaries.ds_salaries WHERE work_year = 2020 AND experience_level= "SE";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
